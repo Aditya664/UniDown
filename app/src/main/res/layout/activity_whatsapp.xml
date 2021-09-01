@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            tools:context=".WhatsappActivity"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rellayout"
+            android:background="@color/colorPrimery"
+            android:layout_height="250dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_back"
+                android:layout_margin="8dp"
+                android:id="@+id/back"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:layout_height="100dp"
+                android:src="@drawable/whatsapp_logo"
+                android:layout_centerInParent="true"
+                android:id="@+id/wlogo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whatsapp"
+                android:layout_below="@+id/wlogo"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/f2"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/rellayout">
+            <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tablayout"
+            app:tabGravity="fill"
+            android:elevation="3dp"
+            android:background="@drawable/tab_rect"
+            android:layout_margin="12dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="@color/colorPrimery"
+            app:tabTextColor="@color/black"
+            app:tabTextAppearance="@style/tabLayout"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewpager"/>
+
+        </LinearLayout>
+        </RelativeLayout>
+</layout>
